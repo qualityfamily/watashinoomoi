@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>私の想い</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold: #c9a24b;
+    --gold-soft: #e9d19a;
+    --cream: #f3ede0;
+    --cream-soft: rgba(243,237,224,0.86);
+    --line: rgba(233,209,154,0.3);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body{
+    position: relative;
+    color: var(--cream);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 2;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0c0c10;
+    overflow-x: hidden;
+  }
+
+  body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('family-bg.png');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,18,0.30) 0%, rgba(14,10,4,0.55) 45%, rgba(8,6,3,0.85) 100%);
+    z-index: 0;
+  }
+
+  main{
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 90px 24px 100px;
+  }
+
+  header.page-head{
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .eyebrow{
+    font-size: 12.5px;
+    letter-spacing: 0.3em;
+    color: var(--cream-soft);
+    margin-bottom: 18px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  }
+
+  h1{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 800;
+    font-size: clamp(30px, 7vw, 42px);
+    color: var(--gold-soft);
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.75);
+  }
+
+  .panel{
+    background: rgba(18,12,6,0.58);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 44px 30px;
+  }
+
+  .intro{
+    font-size: 15.5px;
+    color: var(--cream);
+    margin: 0 0 20px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  }
+
+  .intro:last-of-type{ margin-bottom: 0; }
+
+  .signoff{
+    font-size: 14px;
+    color: var(--cream-soft);
+    margin: 0 0 36px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+
+  .divider{
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 40px 0;
+  }
+
+  article section{
+    margin-bottom: 42px;
+  }
+
+  article section:last-of-type{
+    margin-bottom: 0;
+  }
+
+  article h2{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 19.5px;
+    color: var(--gold-soft);
+    line-height: 1.6;
+    margin: 0 0 18px;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.7);
+  }
+
+  article p{
+    font-size: 15px;
+    color: var(--cream);
+    margin: 0 0 18px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+  }
+
+  article p:last-child{ margin-bottom: 0; }
+
+  blockquote{
+    margin: 24px 0;
+    padding: 20px 22px;
+    background: rgba(201,162,75,0.10);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+  }
+
+  blockquote p{
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--gold-soft);
+    margin: 0;
+    line-height: 1.85;
+  }
+
+  .cta{
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .cta p{
+    font-size: 14.5px;
+    color: var(--cream-soft);
+    margin: 0 0 22px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+
+  .cta a{
+    display: inline-block;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1a1408;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    padding: 15px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    box-shadow: 0 10px 26px rgba(201,162,75,0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .cta a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(201,162,75,0.45);
+  }
+
+  footer.page-foot{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--cream-soft);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    padding: 40px 24px 56px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+
+  @media (max-width: 480px){
+    main{ padding: 64px 18px 80px; }
+    .panel{ padding: 32px 20px; }
+    h1{ letter-spacing: 0.04em; }
+  }
+</style>
+</head>
+<body>
+
+  <main>
+    <header class="page-head">
+      <div class="eyebrow">一般社団法人クオリティファミリー推進委員会</div>
+      <h1>私の想い</h1>
+    </header>
+
+    <div class="panel">
+      <p class="intro">はじめまして。<br>一般社団法人クオリティファミリー推進委員会 代表の〇〇と申します。</p>
+
+      <p class="intro">もし今、あなたが「家族」や「夫婦」というものに、少しでも迷いや悩みを感じているなら。</p>
+
+      <p class="intro">このページを、最後まで読んでみてください。<br>なぜなら私自身が、家庭を一度、完全に壊した人間だからです。</p>
+
+      <hr class="divider">
+
+      <article>
+        <section>
+          <h2>幸せな家庭に育ちながら、私は家庭を壊した</h2>
+          <p>私は幼いころから二世として、祝福や家庭の大切さを教えられて育ちました。</p>
+          <p>21歳のとき、韓国の方と祝福を受け、25歳で家庭を持ち、男の子が生まれました。</p>
+          <p>順風満帆に見えた人生でした。</p>
+          <p>しかし28歳のとき、その祝福は壊れました。<br>離婚。そして、人生はどん底に落ちました。</p>
+        </section>
+
+        <section>
+          <h2>「生きるのが辛い」と本気で思った日々</h2>
+          <p>毎晩のように、子どもが夢に現れました。<br>朝起きると、頬に涙が流れた跡が残っていました。</p>
+          <p>生きるのが辛くて、道を歩いているときに走ってくる車を見て、<br>「あの車が自分に突っ込んでくれたら、どれだけ楽になるだろう」<br>そう思ったこともあります。</p>
+          <p>今でも、あのときの感覚は忘れられません。</p>
+        </section>
+
+        <section>
+          <h2>一つの質問が、私を変えた</h2>
+          <p>そんな私を、いろいろな方々が助けてくれました。</p>
+          <p>中でも、ある一人のお兄さんが私を雇ってくれて、少しずつ人生をやり直させ、自信をつけさせてくれました。</p>
+          <p>それでも私は、まだまだ過去に囚われていました。祝福はもちろん、結婚をもう一度受けるなんて考えられませんでした。「自分にはその資格がない」と、本気で思っていたんです。</p>
+          <p>そんな私に、拾ってくれたお兄さんが、ある日こう聞きました。</p>
+          <blockquote><p>「〇〇は、〇〇君にとってどんな父親になりたいの?」</p></blockquote>
+          <p>このひと言が、私の人生を変えました。</p>
+        </section>
+
+        <section>
+          <h2>毎月の手紙が教えてくれたこと</h2>
+          <p>それから私は、「どんなお父さんになりたいか」を考えるようになりました。</p>
+          <p>そして、離れて暮らす息子に、毎月手紙を書くという行動を始めました。</p>
+          <p>彼が大きくなって、いつか本当のお父さんに会いたいと思ったとき、手紙と一緒に伝えたい想いが、はっきりと見えてきました。</p>
+          <blockquote><p>「〇〇君のことを、ずっと愛してたよ」</p></blockquote>
+          <p>それを聞いて彼がどう感じるかは、正直分かりません。<br>でも、「この人が本当のお父さんで良かった」<br>そう思ってもらえる父親になりたいと、心から思えるようになりました。</p>
+          <p>毎月書き続けるうちに、彼への申し訳なさや、マイナスの想いが、少しずつ消えていきました。</p>
+          <p>代わりに芽生えたのは、こんな気持ちでした。</p>
+          <blockquote><p>「この子のためにも、私は幸せになる責任がある」</p></blockquote>
+          <p>そして、もう一度、祝福に挑戦してみようと決意しました。</p>
+        </section>
+
+        <section>
+          <h2>もう一度、家庭を持つということ</h2>
+          <p>拾ってくれたお兄さんが、今の妻を紹介してくれました。<br>そして2020年、私は再び祝福を受けました。</p>
+          <p>5歳の娘、2歳の息子、0歳の息子が誕生し、現在は妻の実家で義両親と同居しながら、幸せな家庭を築くことができています。</p>
+        </section>
+
+        <section>
+          <h2>今の幸せは、当たり前じゃない</h2>
+          <p>本当に、たくさんの方々に助けていただいて、今の自分があります。</p>
+          <p>だからこそ、今の幸せは当たり前ではないと、私は心の底から思っています。</p>
+          <p>一度どん底まで落ちた人間だからこそ伝えられることがある。そう感じ、現在は社会人二世として働きながら、このコミュニティ活動をさせていただいています。</p>
+          <p>私が壊し、そしてもう一度築き直した「家庭」というもの。</p>
+          <p>そこから見えてきた一つの答えが、「クオリティファミリー」という活動になりました。</p>
+        </section>
+      </article>
+
+      <div class="cta">
+        <p>その理念と誕生秘話については、<br>こちらのページで詳しくお話しします。</p>
+        <a href="https://qualityfamily.github.io/VISION/">クオリティファミリー VISION を見る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-foot">一般社団法人クオリティファミリー推進委員会</footer>
+
+</body>
+</html>
